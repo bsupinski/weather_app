@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+<path fill="#CCCCCC" stroke="#999999" stroke-miterlimit="10" d="M22.39,49.09c11.15-15.95,32.92-14.4,38.01-14.03
+	c15.15,1.08,25.66,8.82,29.82,12.28c3.35-5.23,11.01-15.34,23.97-19.3c20.28-6.19,45.47,5.16,60.22,29.24
+	c3.99-3.56,14.07-11.48,25.73-9.94c22.06,2.92,39.71,38.39,26.31,57.89c-7.15,10.41-22.13,14.8-37.42,12.86
+	c-1.41,16.67-15.28,29.58-31.57,29.82c-15.57,0.23-29.38-11.17-32.16-26.9c0.21,3.11,1.3,22.62-10.52,31.57
+	c-13.85,10.49-43.05,4.7-61.98-22.22c-11.18,10.84-28.34,9.43-36.25,0c-8.34-9.95-5.97-28.34,8.19-36.84
+	C14.71,79.21,13.86,61.29,22.39,49.09z"/>
+<radialGradient id="SVGID_1_" cx="123.8311" cy="105.5199" r="69.473" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FCEE21"/>
+	<stop  offset="0.2429" style="stop-color:#FCEB21"/>
+	<stop  offset="0.444" style="stop-color:#FBE021"/>
+	<stop  offset="0.6302" style="stop-color:#FACF20"/>
+	<stop  offset="0.8074" style="stop-color:#F9B71F"/>
+	<stop  offset="0.9768" style="stop-color:#F7981E"/>
+	<stop  offset="1" style="stop-color:#F7931E"/>
+</radialGradient>
+<circle fill="url(#SVGID_1_)" cx="123.83" cy="105.52" r="69.47"/>
+<path fill="#CCCCCC" stroke="#999999" stroke-miterlimit="10" d="M21.3,103.15c9.95-14.24,29.39-12.86,33.94-12.53
+	c13.53,0.96,22.91,7.88,26.63,10.96c2.99-4.67,9.83-13.7,21.41-17.23c18.11-5.52,40.6,4.6,53.78,26.11
+	c3.57-3.18,12.56-10.25,22.97-8.88c19.69,2.61,35.46,34.28,23.5,51.69c-6.38,9.29-19.76,13.22-33.42,11.49
+	c-1.26,14.89-13.65,26.41-28.19,26.63c-13.9,0.21-26.23-9.97-28.72-24.02c0.19,2.78,1.16,20.2-9.4,28.19
+	c-12.37,9.37-38.44,4.2-55.35-19.84c-9.98,9.68-25.31,8.42-32.37,0c-7.45-8.89-5.33-25.31,7.31-32.89
+	C14.45,130.04,13.69,114.04,21.3,103.15z"/>
+<g>
+	<ellipse fill="none" stroke="#0071BC" stroke-width="2" stroke-miterlimit="10" cx="38.89" cy="218.69" rx="0.41" ry="20.64"/>
+	<ellipse fill="none" stroke="#0071BC" stroke-width="2" stroke-miterlimit="10" cx="44" cy="239.33" rx="0.41" ry="20.64"/>
+	<ellipse fill="none" stroke="#0071BC" stroke-width="2" stroke-miterlimit="10" cx="233.18" cy="217.34" rx="0.41" ry="20.64"/>
+	<ellipse fill="none" stroke="#0071BC" stroke-width="2" stroke-miterlimit="10" cx="228.07" cy="237.98" rx="0.41" ry="20.64"/>
+	<ellipse fill="none" stroke="#0071BC" stroke-width="2" stroke-miterlimit="10" cx="141.15" cy="231.22" rx="0.41" ry="20.64"/>
+	<ellipse fill="none" stroke="#0071BC" stroke-width="2" stroke-miterlimit="10" cx="136.03" cy="231.22" rx="0.41" ry="20.64"/>
+</g>
+<g>
+	<ellipse fill="none" stroke="#0071BC" stroke-width="2" stroke-miterlimit="10" cx="49.57" cy="218.69" rx="0.41" ry="20.64"/>
+	<ellipse fill="none" stroke="#0071BC" stroke-width="2" stroke-miterlimit="10" cx="54.68" cy="239.33" rx="0.41" ry="20.64"/>
+	<ellipse fill="none" stroke="#0071BC" stroke-width="2" stroke-miterlimit="10" cx="243.86" cy="217.34" rx="0.41" ry="20.64"/>
+	<ellipse fill="none" stroke="#0071BC" stroke-width="2" stroke-miterlimit="10" cx="238.75" cy="237.98" rx="0.41" ry="20.64"/>
+	<ellipse fill="none" stroke="#0071BC" stroke-width="2" stroke-miterlimit="10" cx="151.83" cy="231.22" rx="0.41" ry="20.64"/>
+	<ellipse fill="none" stroke="#0071BC" stroke-width="2" stroke-miterlimit="10" cx="146.72" cy="231.22" rx="0.41" ry="20.64"/>
+</g>
+<path fill="#CCCCCC" stroke="#999999" stroke-miterlimit="10" d="M121.35,99.94c9.17-13.12,27.09-11.85,31.27-11.55
+	c12.47,0.89,21.11,7.26,24.54,10.1c2.76-4.31,9.06-12.62,19.73-15.88c16.69-5.09,37.41,4.24,49.56,24.06
+	c3.29-2.93,11.58-9.45,21.17-8.18c18.15,2.4,32.67,31.59,21.65,47.63c-5.88,8.56-18.21,12.18-30.79,10.59
+	c-1.16,13.72-12.58,24.34-25.98,24.54c-12.81,0.19-24.18-9.19-26.46-22.13c0.18,2.56,1.07,18.61-8.66,25.98
+	c-11.4,8.63-35.42,3.87-51-18.28c-9.2,8.92-23.32,7.76-29.83,0c-6.87-8.19-4.91-23.32,6.74-30.31
+	C115.04,124.72,114.34,109.98,121.35,99.94z"/>
+</svg>

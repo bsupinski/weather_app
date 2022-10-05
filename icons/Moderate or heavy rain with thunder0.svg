@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+<path fill="#CCCCCC" stroke="#999999" stroke-miterlimit="10" d="M22.39,49.09c11.15-15.95,32.92-14.4,38.01-14.03
+	c15.15,1.08,25.66,8.82,29.82,12.28c3.35-5.23,11.01-15.34,23.97-19.3c20.28-6.19,45.47,5.16,60.22,29.24
+	c3.99-3.56,14.07-11.48,25.73-9.94c22.06,2.92,39.71,38.39,26.31,57.89c-7.15,10.41-22.13,14.8-37.42,12.86
+	c-1.41,16.67-15.28,29.58-31.57,29.82c-15.57,0.23-29.38-11.17-32.16-26.9c0.21,3.11,1.3,22.62-10.52,31.57
+	c-13.85,10.49-43.05,4.7-61.98-22.22c-11.18,10.84-28.34,9.43-36.25,0c-8.34-9.95-5.97-28.34,8.19-36.84
+	C14.71,79.21,13.86,61.29,22.39,49.09z"/>
+<g>
+	
+		<radialGradient id="SVGID_1_" cx="102.4695" cy="135.1161" r="61.3265" gradientTransform="matrix(-0.1638 0.9865 -0.9865 -0.1638 292.4731 6.3154)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.1164" style="stop-color:#F9F9F4"/>
+		<stop  offset="1" style="stop-color:#CBCCA0"/>
+	</radialGradient>
+	<path fill="url(#SVGID_1_)" d="M133.42,143.45c-35.07-5.82-58.77-38.96-52.95-74.02C84.11,47.5,98.44,30,117.26,21.41
+		c-8.26,8.44-14.12,19.4-16.2,31.93c-5.39,32.48,16.57,63.19,49.05,68.58c20.7,3.44,40.7-4.25,53.86-18.68
+		C193.2,131.1,164.03,148.54,133.42,143.45z"/>
+	
+		<radialGradient id="SVGID_00000031171445267373186590000005389664756743394187_" cx="150.6889" cy="43.221" r="11.7757" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.1164" style="stop-color:#F9F9F4"/>
+		<stop  offset="1" style="stop-color:#CBCCA0"/>
+	</radialGradient>
+	<polygon fill="url(#SVGID_00000031171445267373186590000005389664756743394187_)" points="162.6,47.18 153.5,46.43 149.98,54.86 
+		147.88,45.97 138.77,45.22 146.58,40.47 144.47,31.59 151.4,37.54 159.2,32.8 155.68,41.22 	"/>
+	
+		<radialGradient id="SVGID_00000083065551857830967230000012994940218792178094_" cx="61.1776" cy="82.9484" r="10.0634" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.1164" style="stop-color:#F9F9F4"/>
+		<stop  offset="1" style="stop-color:#CBCCA0"/>
+	</radialGradient>
+	<polygon fill="url(#SVGID_00000083065551857830967230000012994940218792178094_)" points="71.36,86.33 63.58,85.69 60.57,92.89 
+		58.77,85.3 50.99,84.66 57.66,80.6 55.87,73.01 61.79,78.09 68.45,74.04 65.44,81.24 	"/>
+	
+		<radialGradient id="SVGID_00000159433339174512324680000003976777675767024044_" cx="141.7761" cy="100.945" r="8.8084" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.1164" style="stop-color:#F9F9F4"/>
+		<stop  offset="1" style="stop-color:#CBCCA0"/>
+	</radialGradient>
+	<polygon fill="url(#SVGID_00000159433339174512324680000003976777675767024044_)" points="150.69,103.9 143.88,103.34 
+		141.24,109.65 139.67,103 132.86,102.44 138.7,98.89 137.13,92.24 142.31,96.7 148.14,93.15 145.51,99.45 	"/>
+</g>
+<path fill="#CCCCCC" stroke="#999999" stroke-miterlimit="10" d="M21.3,103.15c9.95-14.24,29.39-12.86,33.94-12.53
+	c13.53,0.96,22.91,7.88,26.63,10.96c2.99-4.67,9.83-13.7,21.41-17.23c18.11-5.52,40.6,4.6,53.78,26.11
+	c3.57-3.18,12.56-10.25,22.97-8.88c19.69,2.61,35.46,34.28,23.5,51.69c-6.38,9.29-19.76,13.22-33.42,11.49
+	c-1.26,14.89-13.65,26.41-28.19,26.63c-13.9,0.21-26.23-9.97-28.72-24.02c0.19,2.78,1.16,20.2-9.4,28.19
+	c-12.37,9.37-38.44,4.2-55.35-19.84c-9.98,9.68-25.31,8.42-32.37,0c-7.45-8.89-5.33-25.31,7.31-32.89
+	C14.45,130.04,13.69,114.04,21.3,103.15z"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="271.88" cy="232.71" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="264.77" cy="253.36" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="179.84" cy="246.6" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="172.73" cy="246.6" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="86.27" cy="234.07" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="93.07" cy="254.71" rx="0.1" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="258.58" cy="229.45" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="251.47" cy="250.09" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="166.55" cy="246.33" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="159.44" cy="246.33" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="72.97" cy="230.8" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="79.78" cy="251.44" rx="0.1" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="244.08" cy="231.85" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="236.97" cy="252.49" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="152.04" cy="245.73" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="144.93" cy="245.73" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="58.47" cy="233.2" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="65.27" cy="253.85" rx="0.1" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="230.79" cy="228.59" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="223.67" cy="249.23" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="138.75" cy="245.47" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="131.64" cy="245.47" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="45.17" cy="229.94" rx="0.41" ry="20.64"/>
+<ellipse fill="none" stroke="#0071BC" stroke-width="4" stroke-miterlimit="10" cx="51.98" cy="250.58" rx="0.1" ry="20.64"/>
+<g>
+	<polygon fill="#FFFF00" stroke="#FFFF00" stroke-miterlimit="10" points="160.1,190.35 144.19,217.71 150.09,214.64 164.57,207.1 
+		141.12,245.62 165.68,234.18 136.65,278.84 186.9,221.84 157.58,230.69 181.63,193.5 162.33,202.63 180.76,170.81 	"/>
+	<polygon fill="#F4B321" stroke="#FFFF00" stroke-miterlimit="10" points="160.92,191 152.69,210.96 165.67,206.35 158.41,219.75 
+		146.27,240.97 167.36,235.87 146.27,267.49 172.51,232.45 152.9,235.61 172.51,200.91 161.06,203.42 173.34,179.55 	"/>
+</g>
+<path fill="#CCCCCC" stroke="#999999" stroke-miterlimit="10" d="M121.35,99.94c9.17-13.12,27.09-11.85,31.27-11.55
+	c12.47,0.89,21.11,7.26,24.54,10.1c2.76-4.31,9.06-12.62,19.73-15.88c16.69-5.09,37.41,4.24,49.56,24.06
+	c3.29-2.93,11.58-9.45,21.17-8.18c18.15,2.4,32.67,31.59,21.65,47.63c-5.88,8.56-18.21,12.18-30.79,10.59
+	c-1.16,13.72-12.58,24.34-25.98,24.54c-12.81,0.19-24.18-9.19-26.46-22.13c0.18,2.56,1.07,18.61-8.66,25.98
+	c-11.4,8.63-35.42,3.87-51-18.28c-9.2,8.92-23.32,7.76-29.83,0c-6.87-8.19-4.91-23.32,6.74-30.31
+	C115.04,124.72,114.34,109.98,121.35,99.94z"/>
+</svg>
