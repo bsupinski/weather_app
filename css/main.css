@@ -153,12 +153,15 @@ body {
   flex-direction: row;
   gap: 1.5rem;
   overflow-x: auto;
+  width: 100%;
 }
 .hourly__hour {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
+  min-width: 10rem;
 }
 
 /*# sourceMappingURL=main.css.map */
