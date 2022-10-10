@@ -1,13 +1,4 @@
-body {
-  width: 100vw;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 216, 246, 1) 0%,
-    rgba(254, 254, 254, 0) 100%
-  );
-}
-
-// svg {
-//   width: 400px;
-//   height: 400px;
-// }
+@import "reset";
+@import "utilities/index";
+@import "typography";
+@import "layout/index";

@@ -1,0 +1,20 @@
+.hourly {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &--wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    overflow-x: auto;
+  }
+
+  &__hour {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    // min-width: 10rem;
+  }
+}

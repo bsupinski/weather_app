@@ -2,6 +2,7 @@
     The new CSS reset - version 1.7.3 (last updated 7.8.2022)
     GitHub page: https://github.com/elad2412/the-new-css-reset
 ***/
+
 /*
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug
@@ -85,80 +86,3 @@ meter {
 :where([draggable="true"]) {
   -webkit-user-drag: element;
 }
-
-body {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "current" "5day" "hourly";
-  width: 90%;
-  margin: 2rem auto;
-}
-
-.current {
-  grid-area: "current";
-}
-
-.hourly {
-  grid-area: "hourly";
-}
-
-.five-day {
-  grid-area: "5day";
-}
-
-.title {
-  text-align: center;
-}
-
-.current {
-  width: 100%;
-}
-.current__geographic {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.current__weather {
-  position: relative;
-}
-.current__weather__icon {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.current__weather__icon img {
-  width: 310px;
-}
-.current__weather__text {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  position: absolute;
-  text-align: center;
-  bottom: 1rem;
-}
-.current__weather__air {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.hourly {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.hourly--wrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
-  overflow-x: auto;
-}
-.hourly__hour {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
-}
-
-/*# sourceMappingURL=main.css.map */
