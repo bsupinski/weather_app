@@ -87,29 +87,47 @@ meter {
 }
 
 body {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  margin: auto;
+}
+
+.container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "current" "5day" "hourly";
+  gap: 2rem;
+  grid-template-areas: "current" "hourly" "5day";
   width: 90%;
-  margin: 2rem auto;
 }
 
 .current {
-  grid-area: "current";
+  grid-area: current;
 }
 
 .hourly {
-  grid-area: "hourly";
+  grid-area: hourly;
 }
 
 .five-day {
-  grid-area: "5day";
+  grid-area: 5day;
 }
 
 .title {
   text-align: center;
 }
 
+@media (min-width: 37em) {
+  body {
+    width: 80%;
+  }
+
+  .container {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "hourly current" "hourly 5day" "hourly 5day";
+  }
+}
 .current {
   width: 100%;
 }
@@ -147,21 +165,71 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 .hourly--wrapper {
   display: flex;
-  flex-direction: row;
   gap: 1.5rem;
-  overflow-x: auto;
-  width: 100%;
 }
 .hourly__hour {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: min-content min-content;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
-  min-width: 10rem;
+}
+.hourly__hour__icon {
+  width: 75px;
+}
+
+@media (min-width: 37em) {
+  .hourly--wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+.five-day--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.five-day__day {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-template-areas: "condition temps" "condition wind";
+}
+.five-day__day__condition {
+  grid-area: condition;
+  text-align: center;
+}
+.five-day__day__condition__icon {
+  width: 5rem;
+  height: 5rem;
+}
+.five-day__day__temp {
+  grid-area: temps;
+  display: flex;
+  align-items: center;
+}
+.five-day__day__temp__low {
+  padding-right: 2.5rem;
+}
+.five-day__day__wind {
+  grid-area: wind;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (min-width: 37em) {
+  .five-day--wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,47 @@
+body {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  margin: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  grid-template-areas:
+    "current"
+    "hourly"
+    "5day";
+  width: 90%;
+}
+
+.current {
+  grid-area: current;
+}
+
+.hourly {
+  grid-area: hourly;
+}
+
+.five-day {
+  grid-area: 5day;
+}
+
+.title {
+  text-align: center;
+}
+
+@media (min-width: 37em) {
+  body {
+    width: 80%;
+  }
+  .container {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "hourly current"
+      "hourly 5day"
+      "hourly 5day";
+  }
+}

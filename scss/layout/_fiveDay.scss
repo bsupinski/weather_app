@@ -1,0 +1,54 @@
+.five-day {
+  &--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__day {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    grid-template-areas:
+      "condition temps"
+      "condition wind";
+
+    &__condition {
+      grid-area: condition;
+      text-align: center;
+
+      &__icon {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+
+    &__temp {
+      grid-area: temps;
+      display: flex;
+      align-items: center;
+
+      &__low {
+        padding-right: 2.5rem;
+      }
+    }
+
+    &__wind {
+      grid-area: wind;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 37em) {
+  .five-day {
+    &--wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}
