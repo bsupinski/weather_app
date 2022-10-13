@@ -1,4 +1,5 @@
 .hourly {
+  width: 100%;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -7,7 +8,9 @@
 
   &--wrapper {
     display: flex;
-    gap: 1.5rem;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 3rem;
   }
 
   &__hour {
@@ -15,9 +18,17 @@
     grid-template-columns: min-content min-content;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
 
     &__icon {
       width: 75px;
+    }
+
+    &__text {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   }
 }
@@ -26,8 +37,14 @@
   .hourly {
     &--wrapper {
       flex-direction: row;
-      justify-content: space-between;
       flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: space-around;
+      height: 100%;
+    }
+    &__hour {
+      margin: auto;
+      max-width: max-content;
     }
   }
 }

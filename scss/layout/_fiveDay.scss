@@ -2,20 +2,29 @@
   &--wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+    gap: 1rem 0;
   }
 
   &__day {
     display: grid;
-    grid-template-columns: min-content min-content;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
     grid-template-areas:
+      "date date"
       "condition temps"
       "condition wind";
 
+    &__date {
+      grid-area: date;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
     &__condition {
       grid-area: condition;
-      text-align: center;
 
       &__icon {
         width: 5rem;
@@ -26,11 +35,9 @@
     &__temp {
       grid-area: temps;
       display: flex;
-      align-items: center;
-
-      &__low {
-        padding-right: 2.5rem;
-      }
+      flex-direction: column;
+      align-items: start-end;
+      justify-content: space-around;
     }
 
     &__wind {
@@ -38,7 +45,6 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      align-items: center;
     }
   }
 }
@@ -46,9 +52,8 @@
 @media (min-width: 37em) {
   .five-day {
     &--wrapper {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      padding-right: 1rem;
+      border-right: 2px solid white;
     }
   }
 }

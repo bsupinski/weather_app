@@ -6,6 +6,7 @@
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug
  */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;900&display=swap");
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol
       *)) {
   all: unset;
@@ -86,6 +87,44 @@ meter {
   -webkit-user-drag: element;
 }
 
+.dayBackground {
+  background-color: rgba(76, 242, 242, 0.432);
+  color: #272626;
+}
+
+.nightBackground {
+  background-color: #272626;
+  color: whitesmoke;
+}
+
+body {
+  font-family: "Merriweather", serif;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 8vw, 1.6rem);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 6vw, 1.4rem);
+  font-weight: 400;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 5vw, 1.2rem);
+  font-weight: 400;
+}
+
+h4 {
+  font-size: clamp(1rem, 4vw, 1rem);
+  font-family: 300;
+}
+
+p {
+  font-size: clamp(0.7rem, 3vw, 1rem);
+}
+
 body {
   width: 100vw;
   display: flex;
@@ -100,6 +139,7 @@ body {
   gap: 2rem;
   grid-template-areas: "current" "hourly" "5day";
   width: 90%;
+  max-width: 62rem;
 }
 
 .current {
@@ -124,8 +164,8 @@ body {
   }
 
   .container {
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: "hourly current" "hourly 5day" "hourly 5day";
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "current current" "5day hourly";
   }
 }
 .current {
@@ -153,7 +193,7 @@ body {
   width: 100%;
   position: absolute;
   text-align: center;
-  bottom: 1rem;
+  bottom: 0.7rem;
 }
 .current__weather__air {
   display: flex;
@@ -162,6 +202,7 @@ body {
 }
 
 .hourly {
+  width: 100%;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -170,39 +211,61 @@ body {
 }
 .hourly--wrapper {
   display: flex;
-  gap: 1.5rem;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 3rem;
 }
 .hourly__hour {
   display: grid;
   grid-template-columns: min-content min-content;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
 }
 .hourly__hour__icon {
   width: 75px;
+}
+.hourly__hour__text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media (min-width: 37em) {
   .hourly--wrapper {
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    height: 100%;
+  }
+  .hourly__hour {
+    margin: auto;
+    max-width: max-content;
   }
 }
 .five-day--wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 100%;
+  gap: 1rem 0;
 }
 .five-day__day {
   display: grid;
-  grid-template-columns: min-content min-content;
-  grid-template-areas: "condition temps" "condition wind";
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  grid-template-areas: "date date" "condition temps" "condition wind";
+}
+.five-day__day__date {
+  grid-area: date;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .five-day__day__condition {
   grid-area: condition;
-  text-align: center;
 }
 .five-day__day__condition__icon {
   width: 5rem;
@@ -211,24 +274,21 @@ body {
 .five-day__day__temp {
   grid-area: temps;
   display: flex;
-  align-items: center;
-}
-.five-day__day__temp__low {
-  padding-right: 2.5rem;
+  flex-direction: column;
+  align-items: start-end;
+  justify-content: space-around;
 }
 .five-day__day__wind {
   grid-area: wind;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
 }
 
 @media (min-width: 37em) {
   .five-day--wrapper {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding-right: 1rem;
+    border-right: 2px solid white;
   }
 }
 
