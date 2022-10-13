@@ -19,8 +19,6 @@
     &__date {
       grid-area: date;
       width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
     }
 
     &__condition {

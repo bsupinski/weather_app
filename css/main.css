@@ -129,7 +129,6 @@ body {
   width: 100vw;
   display: flex;
   justify-content: center;
-  padding: 2rem 0;
   margin: auto;
 }
 
@@ -261,8 +260,6 @@ body {
 .five-day__day__date {
   grid-area: date;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 .five-day__day__condition {
   grid-area: condition;
