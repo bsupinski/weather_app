@@ -97,6 +97,22 @@ meter {
   color: whitesmoke;
 }
 
+.mb-xsm {
+  margin-bottom: 0.2rem;
+}
+
+.mb-sm {
+  margin-bottom: 0.4rem;
+}
+
+.mb-med {
+  margin-bottom: 0.8rem;
+}
+
+.mb-lg {
+  margin-bottom: 1rem;
+}
+
 body {
   font-family: "Merriweather", serif;
 }
@@ -117,12 +133,12 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(1rem, 4vw, 1rem);
+  font-size: clamp(0.04rem, 4vw, 1rem);
   font-family: 300;
 }
 
 p {
-  font-size: clamp(0.7rem, 3vw, 1rem);
+  font-size: clamp(0.4rem, 3vw, 0.8rem);
 }
 
 body {
@@ -130,6 +146,7 @@ body {
   display: flex;
   justify-content: center;
   margin: auto;
+  padding: 2rem 0;
 }
 
 .container {
@@ -175,6 +192,9 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+.current__geographic__location {
+  max-width: 9.4rem;
+}
 .current__weather {
   position: relative;
 }
@@ -205,7 +225,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  overflow-x: auto;
   overflow-y: hidden;
 }
 .hourly--wrapper {
@@ -213,35 +232,45 @@ body {
   justify-content: flex-start;
   width: 100%;
   gap: 3rem;
+  overflow: scroll;
+  padding-bottom: 1rem;
 }
 .hourly__hour {
   display: grid;
-  grid-template-columns: min-content min-content;
-  justify-content: center;
-  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "icon info" "air air";
   gap: 0.5rem;
 }
 .hourly__hour__icon {
+  grid-area: icon;
   width: 75px;
 }
-.hourly__hour__text {
+.hourly__hour__key-info {
+  grid-area: info;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.hourly__hour__air {
+  grid-area: air;
+  display: flex;
+  justify-content: space-between;
+}
+.hourly__hour__air p {
+  text-align: center;
 }
 
 @media (min-width: 37em) {
   .hourly--wrapper {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
+    justify-content: space-between;
     height: 100%;
   }
   .hourly__hour {
-    margin: auto;
     max-width: max-content;
+    margin: auto;
   }
 }
 .five-day--wrapper {
@@ -256,6 +285,10 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
   grid-template-areas: "date date" "condition temps" "condition wind";
+}
+.five-day__day:not(:first-child) {
+  padding-top: 1rem;
+  border-top: 2px solid white;
 }
 .five-day__day__date {
   grid-area: date;

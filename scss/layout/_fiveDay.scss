@@ -15,6 +15,10 @@
       "date date"
       "condition temps"
       "condition wind";
+    &:not(:first-child) {
+      padding-top: 1rem;
+      border-top: 2px solid white;
+    }
 
     &__date {
       grid-area: date;

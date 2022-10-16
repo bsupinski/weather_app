@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  overflow-x: auto;
   overflow-y: hidden;
 
   &--wrapper {
@@ -11,24 +10,39 @@
     justify-content: flex-start;
     width: 100%;
     gap: 3rem;
+    overflow: scroll;
+    padding-bottom: 1rem;
   }
 
   &__hour {
     display: grid;
-    grid-template-columns: min-content min-content;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "icon info"
+      "air air";
     gap: 0.5rem;
 
     &__icon {
+      grid-area: icon;
       width: 75px;
     }
 
-    &__text {
+    &__key-info {
+      grid-area: info;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+    }
+
+    &__air {
+      grid-area: air;
+      display: flex;
+      justify-content: space-between;
+
+      & p {
+        text-align: center;
+      }
     }
   }
 }
@@ -38,13 +52,12 @@
     &--wrapper {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-around;
-      align-content: space-around;
+      justify-content: space-between;
       height: 100%;
     }
     &__hour {
-      margin: auto;
       max-width: max-content;
+      margin: auto;
     }
   }
 }

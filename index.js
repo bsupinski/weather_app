@@ -1,8 +1,8 @@
-const key = "476826e5e2fa4241aad201532222709";
 const body = document.querySelector("body");
 const currentWeatherContainer = document.querySelector(
   ".current_weather-container"
 );
+const key = "476826e5e2fa4241aad201532222709";
 
 const daysOfTheWeek = {
   Mon: "Monday",
@@ -40,7 +40,8 @@ const createCurrentLocationObject = (data) => {
     locName: location.name,
     locRegion: location.region,
     locCountry: location.country,
-    locDateTime: new Date(location.localtime).toDateString(),
+    locDateDay: new Date(location.localtime).toDateString(),
+    locTime: location.localtime,
   };
 };
 
@@ -56,14 +57,15 @@ const createCurrentWeatherObject = (data) => {
     currWindGust: current.gust_mph,
     currWindDirection: current.wind_dir,
     currHumidity: current.humidity,
+    currVisibility: current.vis_miles,
   };
 };
 
 const createCurrentDayForecast = (data) => {
   const { forecast } = data;
   return {
-    maxTemp: forecast.forecastday[0].day.maxtemp_f,
-    minTemp: forecast.forecastday[0].day.mintemp_f,
+    maxTemp_f: forecast.forecastday[0].day.maxtemp_f,
+    minTemp_f: forecast.forecastday[0].day.mintemp_f,
   };
 };
 
@@ -88,8 +90,8 @@ const createFiveDayForecast = (data) => {
   const { forecast } = data;
   return forecast.forecastday.map((day) => {
     return {
-      hourDate: day.date,
-      maxtemp_f: day.day.maxtemp_f,
+      dayHourDate: day.date,
+      dayMaxtemp_f: day.day.maxtemp_f,
     };
   });
 };
@@ -105,7 +107,7 @@ const loadWeather = async function (coords) {
     state.dayForcast = createCurrentDayForecast(data);
     state.dayHourly = createCurrentHourlyForecast(data);
     state.fiveDay = createFiveDayForecast(data);
-    console.log(data);
+    console.log(state.fiveDay);
     // currentWeatherContainer.innerHTML = `<h1 class="current_day">${
     //   daysOfTheWeek[state.location.locDateTime.split(" ")[0]]
     // }</h1>
