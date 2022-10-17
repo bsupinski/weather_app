@@ -7,6 +7,7 @@ class CurrentView {
     const markup = this._generateMarkup();
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
     console.log(this._data);
+    console.log(this._data.location);
   }
 
   _generateMarkup() {

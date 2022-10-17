@@ -43,10 +43,9 @@ const createCurrentDayForecast = (data) => {
 
 const createCurrentHourlyForecast = (data) => {
   const { forecast } = data;
-  let hoursLeftInDay;
-  return (hoursLeftInDay = forecast.forecastday[0].hour
+  return forecast.forecastday[0].hour
     .concat(forecast.forecastday[1].hour)
-    .filter((hour) => hour.time > state.location.currDayTime))
+    .filter((hour) => hour.time > state.location.currDayTime)
     .map((hour) => {
       return {
         hourDateTime: hour.time,
