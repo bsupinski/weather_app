@@ -22,7 +22,7 @@ const state = {
   fiveDay: {},
 };
 
-const userLocation = () => {
+const userLocation = async function () {
   navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack);
 };
 const successCallBack = (position) => {
@@ -107,7 +107,8 @@ const loadWeather = async function (coords) {
     state.dayForcast = createCurrentDayForecast(data);
     state.dayHourly = createCurrentHourlyForecast(data);
     state.fiveDay = createFiveDayForecast(data);
-    console.log(state.fiveDay);
+    console.log(state);
+    // console.log(state.fiveDay);
     // currentWeatherContainer.innerHTML = `<h1 class="current_day">${
     //   daysOfTheWeek[state.location.locDateTime.split(" ")[0]]
     // }</h1>

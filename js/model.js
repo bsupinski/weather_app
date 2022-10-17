@@ -1,4 +1,4 @@
-import { KEY } from "./config";
+import { KEY } from "./config.js";
 
 const state = {
   location: {},
@@ -8,7 +8,7 @@ const state = {
   fiveDay: {},
 };
 
-const userLocation = () => {
+export const userLocation = async function () {
   navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack);
 };
 const successCallBack = (position) => {
@@ -55,6 +55,7 @@ const createCurrentDayForecast = (data) => {
 
 const createCurrentHourlyForecast = (data) => {
   const { forecast } = data;
+  let hoursLeftInDay;
   return (hoursLeftInDay = forecast.forecastday[0].hour
     .concat(forecast.forecastday[1].hour)
     .filter((hour) => hour.time > state.location.currDayTime))
@@ -83,7 +84,7 @@ const createFiveDayForecast = (data) => {
 const loadWeather = async function (coords) {
   try {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${coords}&days=5&aqi=no&alerts=no`
+      `http://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=${coords}&days=5&aqi=no&alerts=no`
     );
     const data = await response.json();
     state.location = createCurrentLocationObject(data);
@@ -91,7 +92,6 @@ const loadWeather = async function (coords) {
     state.dayForcast = createCurrentDayForecast(data);
     state.dayHourly = createCurrentHourlyForecast(data);
     state.fiveDay = createFiveDayForecast(data);
-    console.log(data);
     // currentWeatherContainer.innerHTML = `<h1 class="current_day">${
     //   daysOfTheWeek[state.location.locDateTime.split(" ")[0]]
     // }</h1>
