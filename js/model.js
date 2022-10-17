@@ -14,7 +14,8 @@ const createCurrentLocationObject = (data) => {
     locName: location.name,
     locRegion: location.region,
     locCountry: location.country,
-    locDateTime: new Date(location.localtime).toDateString(),
+    locDateDay: new Date(location.localtime).toDateString(),
+    locTime: location.localtime,
   };
 };
 
@@ -45,17 +46,17 @@ const createCurrentHourlyForecast = (data) => {
   const { forecast } = data;
   return forecast.forecastday[0].hour
     .concat(forecast.forecastday[1].hour)
-    .filter((hour) => hour.time > state.location.currDayTime)
+    .filter((hour) => hour.time > state.location.locTime)
+    .slice(0, 12)
     .map((hour) => {
       return {
         hourDateTime: hour.time,
         hourTime: hour.time[0],
         hourDate: hour.time[1],
         hourTime: hour.time,
-        hourTemp_f: hour.temp_f,
+        hourTempF: hour.temp_f,
       };
-    })
-    .slice(0, 12);
+    });
 };
 
 const createFiveDayForecast = (data) => {

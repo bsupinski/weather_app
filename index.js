@@ -69,21 +69,36 @@ const createCurrentDayForecast = (data) => {
   };
 };
 
+// const createCurrentHourlyForecast = (data) => {
+//   const { forecast } = data;
+//   return forecast.forecastday[0].hour
+//     .concat(forecast.forecastday[1].hour)
+//     .filter((hour) => hour.time > state.location.currDayTime)
+//     .map((hour) => {
+//       return {
+//         hourDateTime: hour.time,
+//         hourTime: hour.time[0],
+//         hourDate: hour.time[1],
+//         hourTime: hour.time,
+//         hourTempF: hour.temp_f,
+//       };
+//     });
+// };
 const createCurrentHourlyForecast = (data) => {
   const { forecast } = data;
-  return (hoursLeftInDay = forecast.forecastday[0].hour
+  return forecast.forecastday[0].hour
     .concat(forecast.forecastday[1].hour)
-    .filter((hour) => hour.time > state.location.currDayTime))
+    .filter((hour) => hour.time > state.location.locTime)
+    .slice(0, 12)
     .map((hour) => {
       return {
         hourDateTime: hour.time,
         hourTime: hour.time[0],
         hourDate: hour.time[1],
         hourTime: hour.time,
-        hourTemp_f: hour.temp_f,
+        hourTempF: hour.temp_f,
       };
-    })
-    .slice(0, 12);
+    });
 };
 
 const createFiveDayForecast = (data) => {
@@ -107,7 +122,7 @@ const loadWeather = async function (coords) {
     state.dayForcast = createCurrentDayForecast(data);
     state.dayHourly = createCurrentHourlyForecast(data);
     state.fiveDay = createFiveDayForecast(data);
-    console.log(state);
+    console.log(state.dayHourly);
     // console.log(state.fiveDay);
     // currentWeatherContainer.innerHTML = `<h1 class="current_day">${
     //   daysOfTheWeek[state.location.locDateTime.split(" ")[0]]
