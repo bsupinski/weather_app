@@ -1,23 +1,11 @@
 import { KEY } from "./config.js";
 
-const state = {
+export const state = {
   location: {},
   current: {},
   dayForcast: {},
   dayHourly: {},
   fiveDay: {},
-};
-
-export const userLocation = async function () {
-  navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack);
-};
-const successCallBack = (position) => {
-  const { latitude, longitude } = position.coords;
-  const coords = [latitude, longitude].toString();
-  loadWeather(coords);
-};
-const errorCallBack = (error) => {
-  console.error(error);
 };
 
 const createCurrentLocationObject = (data) => {
@@ -81,7 +69,7 @@ const createFiveDayForecast = (data) => {
   });
 };
 
-const loadWeather = async function (coords) {
+export const loadWeather = async function (coords) {
   try {
     const response = await fetch(
       `http://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=${coords}&days=5&aqi=no&alerts=no`
@@ -92,21 +80,7 @@ const loadWeather = async function (coords) {
     state.dayForcast = createCurrentDayForecast(data);
     state.dayHourly = createCurrentHourlyForecast(data);
     state.fiveDay = createFiveDayForecast(data);
-    // currentWeatherContainer.innerHTML = `<h1 class="current_day">${
-    //   daysOfTheWeek[state.location.locDateTime.split(" ")[0]]
-    // }</h1>
-    // <h2 class="current__time">${state.location.locDateTime
-    //   .split(" ")
-    //   .splice(1)
-    //   .join(" ")}</h2>
-    // <h3 class="current_weather-condition">${state.current.currWeather}</h3>
-    // <img class="current_weather-icon" src="icons/${state.current.currWeather}${
-    //   state.current.currDayNight
-    // }.svg" alt="" />
-    // `;
   } catch (error) {
     console.log(error);
   }
 };
-
-userLocation();

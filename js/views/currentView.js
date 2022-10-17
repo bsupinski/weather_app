@@ -1,19 +1,19 @@
 class CurrentView {
   _parentElement = document.querySelector(".current");
-  data;
+  _data;
 
   render(data) {
-    this.data = data;
+    this._data = data;
     const markup = this._generateMarkup();
-    this._parentElement.innerHTML = markup;
-    console.log(data);
+    this._parentElement.insertAdjacentHTML("afterbegin", markup);
+    console.log(this._data);
   }
 
   _generateMarkup() {
     return `
     <div class="current__geographic | mb-med">
           <div class="current__geographic__location">
-            <h3 class="current__geographic__location__name | mb-sm">{this.data.locName}</h3>
+            <h3 class="current__geographic__location__name | mb-sm">${this._data.location.locRegion}</h3>
             <h3 class="current__geographic__location__region margin-bottom | mb-sm">Rhode Island</h3>
             <h4 class="current__geographic__location__country">
               United State of America
