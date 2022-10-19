@@ -4,22 +4,21 @@ import currentView from "./views/currentView.js";
 const userLocation = async function () {
   navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack);
 };
-const successCallBack = (position) => {
-  const { latitude, longitude } = position.coords;
-  const coords = [latitude, longitude].toString();
-  model.loadWeather(coords);
+
+const successCallBack = async function (position) {
+  try {
+    const { latitude, longitude } = position.coords;
+    const coords = [latitude, longitude].toString();
+    await model.fetchWeather(coords);
+    renderWeather();
+  } catch (error) {}
 };
 const errorCallBack = (error) => {
   console.error(error);
 };
 
-const loadUserWeather = async function () {
-  try {
-    await userLocation();
-    currentView.render(model.state);
-  } catch (error) {
-    console.log(error);
-  }
+const renderWeather = function () {
+  currentView.render(model.state);
 };
 
-window.addEventListener("load", loadUserWeather);
+window.addEventListener("load", userLocation);

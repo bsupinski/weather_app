@@ -14,8 +14,10 @@ const createCurrentLocationObject = (data) => {
     locName: location.name,
     locRegion: location.region,
     locCountry: location.country,
-    locDateDay: new Date(location.localtime).toDateString(),
-    locTime: location.localtime,
+    locDay: new Date(location.localtime).toDateString().slice(0, 3),
+    locDate: new Date(location.localtime).toDateString().slice(4),
+    locDateTime: location.localtime, //Used for create hourle forecast
+    locTime: location.localtime.split(" ")[1],
   };
 };
 
@@ -31,6 +33,8 @@ const createCurrentWeatherObject = (data) => {
     currWindGust: current.gust_mph,
     currWindDirection: current.wind_dir,
     currHumidity: current.humidity,
+    currVisibility: current.vis_miles,
+    currAirQuality: current.air_quality.us - epa - index,
   };
 };
 
@@ -46,7 +50,7 @@ const createCurrentHourlyForecast = (data) => {
   const { forecast } = data;
   return forecast.forecastday[0].hour
     .concat(forecast.forecastday[1].hour)
-    .filter((hour) => hour.time > state.location.locTime)
+    .filter((hour) => hour.time > state.location.locDateTime)
     .slice(0, 12)
     .map((hour) => {
       return {
@@ -69,7 +73,7 @@ const createFiveDayForecast = (data) => {
   });
 };
 
-export const loadWeather = async function (coords) {
+export const fetchWeather = async function (coords) {
   try {
     const response = await fetch(
       `http://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=${coords}&days=5&aqi=no&alerts=no`
@@ -81,6 +85,6 @@ export const loadWeather = async function (coords) {
     state.dayHourly = createCurrentHourlyForecast(data);
     state.fiveDay = createFiveDayForecast(data);
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 };
