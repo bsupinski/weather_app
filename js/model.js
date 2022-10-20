@@ -34,7 +34,7 @@ const createCurrentWeatherObject = (data) => {
     currWindDirection: current.wind_dir,
     currHumidity: current.humidity,
     currVisibility: current.vis_miles,
-    currAirQuality: current.air_quality.us - epa - index,
+    currAirQuality: current.air_quality["us-epa-index"],
   };
 };
 
@@ -76,14 +76,16 @@ const createFiveDayForecast = (data) => {
 export const fetchWeather = async function (coords) {
   try {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=${coords}&days=5&aqi=no&alerts=no`
+      `http://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=${coords}&days=5&aqi=yes&alerts=no`
     );
     const data = await response.json();
+    console.log(data);
     state.location = createCurrentLocationObject(data);
     state.current = createCurrentWeatherObject(data);
     state.dayForcast = createCurrentDayForecast(data);
     state.dayHourly = createCurrentHourlyForecast(data);
     state.fiveDay = createFiveDayForecast(data);
+    console.log(typeof state.location.locTime);
   } catch (error) {
     throw error;
   }

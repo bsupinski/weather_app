@@ -18,12 +18,38 @@ class CurrentView {
     if (day === "Sun") return "Sunday";
   };
 
-  _dateFormat = (date) => {};
   _timeFormat = (time) => {
-    if (time > "00:00" && time < "12") return `${time} AM`;
     if (time >= "12:00" && time <= "12:59") return `${time} PM`;
-    else return `${time.slice(0, 2) - 12 + time.slice(2)} PM`;
+    if (time >= "13:00" && time <= "23:59")
+      return `${time.slice(0, 2) - 12 + time.slice(2)} PM`;
+    else return `${time} AM`;
   };
+
+  _airQuality(aq) {
+    if (aq < 3) {
+      return "Good";
+    }
+    if (aq < 5) {
+      return "Unhealthy";
+    } else {
+      return "Hazardous";
+    }
+  }
+
+  airQualityColor(aq) {
+    const airQuality = document.getElementById("currentAirQuality");
+    if (aq < 3) {
+      airQuality.style.color = "green";
+      return;
+    }
+    if (aq < 5) {
+      airQuality.style.color = "orange";
+      return;
+    } else {
+      airQuality.style.color = "red";
+      return;
+    }
+  }
 
   _generateMarkup() {
     return `
@@ -62,7 +88,7 @@ class CurrentView {
           </div>
           <div class="current__weather__text">
             <div class="current__weather__text__low">
-              <h4>L:${this._data.dayForcast.minTemp}&#176</h4>
+              <h4>L: ${this._data.dayForcast.minTemp}&#176</h4>
             </div>
             <div class="current__weather__text__info">
               <h2 class="current__weather__text__info__condition m-bottom-sm">${
@@ -76,7 +102,7 @@ class CurrentView {
               </h4>
             </div>
             <div class="current__weather__high">
-              <h4>H:${this._data.dayForcast.maxTemp}&#176</h4>
+              <h4>H: ${this._data.dayForcast.maxTemp}&#176</h4>
             </div>
           </div>
         </div>
@@ -96,11 +122,12 @@ class CurrentView {
           </div>
           <div class="current__weather__air__quality">
             <h4 class="mb-sm">Air Quality</h4>
-            <p class="mb-xsm">${this._data.current.currWindSpeed}</p>
+            <p id="currentAirQuality" class="mb-xsm">
+            ${this._airQuality(this._data.current.currAirQuality)}</p>
           </div>
           <div class="current__weather__air__humidity">
             <h4 class="mb-sm">Humidity</h4>
-            <p class="mb-xsm">${this._data.current.currHumidity}%</p>
+            <p class="mb-xsm ">${this._data.current.currHumidity}</p>
           </div>
         </div>`;
   }
