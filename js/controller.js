@@ -1,5 +1,6 @@
 import * as model from "./model.js";
 import currentView from "./views/currentView.js";
+import dayView from "./views/dayView.js";
 
 const body = document.querySelector("body");
 
@@ -13,9 +14,10 @@ const successCallBack = async function (position) {
     const coords = [latitude, longitude].toString();
     await model.fetchWeather(coords);
     renderWeather();
-    if ((model.state.current.currDayNight = 0))
+    if (model.state.current.currDayNight == "0")
+      body.classList.toggle("nightBackground");
+    if (model.state.current.currDayNight == "1")
       body.classList.toggle("dayBackground");
-    else body.classList.toggle("nightBackground");
   } catch (error) {
     console.log(error);
   }
@@ -27,6 +29,7 @@ const errorCallBack = (error) => {
 const renderWeather = function () {
   currentView.render(model.state);
   currentView.airQualityColor(model.state.current.currAirQuality);
+  dayView.render(model.state);
 };
 
 window.addEventListener("load", userLocation);

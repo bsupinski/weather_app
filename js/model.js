@@ -68,7 +68,7 @@ const createFiveDayForecast = (data) => {
   return forecast.forecastday.map((day) => {
     return {
       hourDate: day.date,
-      maxtemp_f: day.day.maxtemp_f,
+      maxTempF: day.day.maxtemp_f,
     };
   });
 };
@@ -79,13 +79,12 @@ export const fetchWeather = async function (coords) {
       `http://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=${coords}&days=5&aqi=yes&alerts=no`
     );
     const data = await response.json();
-    console.log(data);
+    console.log(data.forecast.forecastday);
     state.location = createCurrentLocationObject(data);
     state.current = createCurrentWeatherObject(data);
     state.dayForcast = createCurrentDayForecast(data);
     state.dayHourly = createCurrentHourlyForecast(data);
     state.fiveDay = createFiveDayForecast(data);
-    console.log(typeof state.location.locTime);
   } catch (error) {
     throw error;
   }
