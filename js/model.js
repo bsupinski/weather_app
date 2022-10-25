@@ -84,7 +84,7 @@ const createFiveDayForecast = (data) => {
 export const fetchWeather = async function (coords) {
   try {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=${coords}&days=5&aqi=yes&alerts=no`
+      `https://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=${coords}&days=5&aqi=yes&alerts=no`
     );
     const data = await response.json();
 
