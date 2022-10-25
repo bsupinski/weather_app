@@ -17,7 +17,6 @@
       "condition wind";
     &:not(:first-child) {
       padding-top: 1rem;
-      border-top: 2px solid white;
     }
 
     &__date {
@@ -55,7 +54,6 @@
   .five-day {
     &--wrapper {
       padding-right: 1rem;
-      border-right: 2px solid white;
     }
   }
 }

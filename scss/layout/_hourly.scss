@@ -16,7 +16,7 @@
 
   &__hour {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: min-content 1fr;
     grid-template-areas:
       "icon info"
       "air air";

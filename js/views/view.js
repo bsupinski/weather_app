@@ -17,7 +17,14 @@ export default class View {
     if (day === "Sun") return "Sunday";
   };
 
+  _weatherIconFormat(weather) {
+    if (weather === "Sunny") return "Clear";
+    else return weather;
+  }
+
   _timeFormat = (time) => {
+    if (time >= "00:00" && time <= "00:59")
+      return `${time.slice(2, 2) + 12 + time.slice(2)} AM`;
     if (time >= "12:00" && time <= "12:59") return `${time} PM`;
     if (time >= "13:00" && time <= "23:59")
       return `${time.slice(0, 2) - 12 + time.slice(2)} PM`;
@@ -35,13 +42,12 @@ export default class View {
     }
   }
 
-  airQualityColor(aq) {
-    const airQuality = document.getElementById("currentAirQuality");
-    if (aq < 3) {
+  airQualityColor() {
+    if ((airQuality.textConter = "Good")) {
       airQuality.style.color = "green";
       return;
     }
-    if (aq < 5) {
+    if ((airQuality.textConter = "Hazardous")) {
       airQuality.style.color = "orange";
       return;
     } else {

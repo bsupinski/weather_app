@@ -27,10 +27,10 @@ const createCurrentWeatherObject = (data) => {
     currDayNight: current.is_day,
     currWeather: current.condition.text,
     currWeatherIcon: current.condition.icon,
-    currTempF: current.temp_f,
-    currTempFeelsLike: current.feelslike_f,
-    currWindSpeed: current.wind_mph,
-    currWindGust: current.gust_mph,
+    currTempF: parseInt(current.temp_f),
+    currTempFeelsLike: parseInt(current.feelslike_f),
+    currWindSpeed: parseInt(current.wind_mph),
+    currWindGust: parseInt(current.gust_mph),
     currWindDirection: current.wind_dir,
     currHumidity: current.humidity,
     currVisibility: current.vis_miles,
@@ -41,8 +41,8 @@ const createCurrentWeatherObject = (data) => {
 const createCurrentDayForecast = (data) => {
   const { forecast } = data;
   return {
-    maxTemp: forecast.forecastday[0].day.maxtemp_f,
-    minTemp: forecast.forecastday[0].day.mintemp_f,
+    maxTemp: parseInt(forecast.forecastday[0].day.maxtemp_f),
+    minTemp: parseInt(forecast.forecastday[0].day.mintemp_f),
   };
 };
 
@@ -54,11 +54,15 @@ const createCurrentHourlyForecast = (data) => {
     .slice(0, 12)
     .map((hour) => {
       return {
+        hourDayNight: hour.is_day,
         hourDateTime: hour.time,
         hourTime: hour.time[0],
         hourDate: hour.time[1],
         hourTime: hour.time,
-        hourTempF: hour.temp_f,
+        hourTempF: parseInt(hour.temp_f),
+        hourCondition: hour.condition.text,
+        hourWind: parseInt(hour.wind_mph),
+        hourAirQuality: hour.air_quality["us-epa-index"],
       };
     });
 };
@@ -67,8 +71,12 @@ const createFiveDayForecast = (data) => {
   const { forecast } = data;
   return forecast.forecastday.map((day) => {
     return {
-      hourDate: day.date,
-      maxTempF: day.day.maxtemp_f,
+      fiveDayDate: day.date,
+      fiveDayMaxTempF: parseInt(day.day.maxtemp_f),
+      fiveDayMinTempF: parseInt(day.day.mintemp_f),
+      fiveDayMaxWind: parseInt(day.day.maxwind_mph),
+      fiveDayWeather: day.day.condition.text,
+      fiveDayAirQuality: day.day.air_quality["us-epa-index"],
     };
   });
 };
@@ -79,12 +87,13 @@ export const fetchWeather = async function (coords) {
       `http://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=${coords}&days=5&aqi=yes&alerts=no`
     );
     const data = await response.json();
-    console.log(data.forecast.forecastday);
+
     state.location = createCurrentLocationObject(data);
     state.current = createCurrentWeatherObject(data);
     state.dayForcast = createCurrentDayForecast(data);
     state.dayHourly = createCurrentHourlyForecast(data);
     state.fiveDay = createFiveDayForecast(data);
+    console.log(state.dayHourly);
   } catch (error) {
     throw error;
   }

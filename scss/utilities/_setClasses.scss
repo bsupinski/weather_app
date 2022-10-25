@@ -8,6 +8,19 @@
   color: whitesmoke;
 }
 
+.dayBorderRight {
+  border-right: 2px solid rgb(39, 38, 38);
+}
+.nightBorderRight {
+  border-right: 2px solid white;
+}
+.dayBorderBottom {
+  border-bottom: 2px solid rgb(39, 38, 38);
+}
+.nightBorderBottom {
+  border-bottom: 2px solid white;
+}
+
 .mb-xsm {
   margin-bottom: 0.2rem;
 }

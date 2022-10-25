@@ -1,6 +1,9 @@
 import * as model from "./model.js";
 import currentView from "./views/currentView.js";
 import dayView from "./views/dayView.js";
+import hourView from "./views/hourlyView.js";
+
+const airQuality = document.querySelectorAll(".currentAirQuality");
 
 const body = document.querySelector("body");
 
@@ -28,8 +31,9 @@ const errorCallBack = (error) => {
 
 const renderWeather = function () {
   currentView.render(model.state);
-  currentView.airQualityColor(model.state.current.currAirQuality);
+  // currentView.airQualityColor(model.state.current.currAirQuality);
   dayView.render(model.state);
+  hourView.render(model.state);
 };
 
 window.addEventListener("load", userLocation);

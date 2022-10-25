@@ -34,9 +34,9 @@ class CurrentView extends View {
         </div>
         <div class="current__weather | mb-med">
           <div class="current__weather__icon">
-            <img src="../../icons/${this._data.current.currWeather}${
-      this._data.current.currDayNight
-    }.svg" alt=""/>
+            <img src="../../icons/${this._weatherIconFormat(
+              this._data.current.currWeather
+            )}${this._data.current.currDayNight}.svg" alt=""/>
           </div>
           <div class="current__weather__text">
             <div class="current__weather__text__low">
@@ -74,12 +74,12 @@ class CurrentView extends View {
           </div>
           <div class="current__weather__air__quality">
             <h4 class="mb-sm">Air Quality</h4>
-            <p id="currentAirQuality" class="mb-xsm">
+            <p class="mb-xsm currentAirQuality">
             ${this._airQuality(this._data.current.currAirQuality)}</p>
           </div>
           <div class="current__weather__air__humidity">
             <h4 class="mb-sm">Humidity</h4>
-            <p class="mb-xsm ">${this._data.current.currHumidity}</p>
+            <p class="mb-xsm ">${this._data.current.currHumidity}%</p>
           </div>
         </div>`;
   }
