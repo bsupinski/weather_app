@@ -4,7 +4,7 @@ export const state = {
   location: {},
   current: {},
   dayForcast: {},
-  dayHourly: {},
+  hourly: {},
   fiveDay: {},
 };
 
@@ -46,7 +46,7 @@ const createCurrentDayForecast = (data) => {
   };
 };
 
-const createCurrentHourlyForecast = (data) => {
+const createHourlyForecast = (data) => {
   const { forecast } = data;
   return forecast.forecastday[0].hour
     .concat(forecast.forecastday[1].hour)
@@ -91,9 +91,9 @@ export const fetchWeather = async function (coords) {
     state.location = createCurrentLocationObject(data);
     state.current = createCurrentWeatherObject(data);
     state.dayForcast = createCurrentDayForecast(data);
-    state.dayHourly = createCurrentHourlyForecast(data);
+    state.hourly = createHourlyForecast(data);
     state.fiveDay = createFiveDayForecast(data);
-    console.log(state.dayHourly);
+    console.log(state.hourly);
   } catch (error) {
     throw error;
   }

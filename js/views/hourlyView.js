@@ -4,7 +4,7 @@ class hourlyView extends View {
   _parentElement = document.querySelector(".hourly--wrapper");
 
   _generateMarkup() {
-    return this._data.dayHourly
+    return this._data.hourly
       .map((hour) => {
         return `
         <div class="hourly__hour">
@@ -26,9 +26,7 @@ class hourlyView extends View {
           </div>
           <div class="hourly__hour__air__quality">
             <h4 class="mb-xsm">Air Quality</h4>
-            <p class="currentAirQuality">${this._airQuality(
-              hour.hourAirQuality
-            )}</p>
+            <p class="air__quality">${this._airQuality(hour.hourAirQuality)}</p>
           </div>
         </div>
       </div>`;
