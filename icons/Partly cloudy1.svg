@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+<g id="bright_sun">
+</g>
+<g id="sun">
+	<radialGradient id="SVGID_1_" cx="135.5477" cy="132.0414" r="79.4385" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FCEE21"/>
+		<stop  offset="0.2429" style="stop-color:#FCEB21"/>
+		<stop  offset="0.444" style="stop-color:#FBE021"/>
+		<stop  offset="0.6302" style="stop-color:#FACF20"/>
+		<stop  offset="0.8074" style="stop-color:#F9B71F"/>
+		<stop  offset="0.9768" style="stop-color:#F7981E"/>
+		<stop  offset="1" style="stop-color:#F7931E"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_1_)" cx="135.55" cy="132.04" r="79.44"/>
+</g>
+<g id="Moon">
+	<path fill="#CCCCCC" stroke="#999999" stroke-miterlimit="10" d="M97.78,106.07c9.95-14.24,29.39-12.86,33.94-12.53
+		c13.53,0.96,22.91,7.88,26.63,10.96c2.99-4.67,9.83-13.7,21.41-17.23c18.11-5.52,40.6,4.6,53.78,26.11
+		c3.57-3.18,12.56-10.25,22.97-8.88c19.69,2.61,35.46,34.28,23.5,51.69c-6.38,9.29-19.76,13.22-33.42,11.49
+		c-1.26,14.89-13.65,26.41-28.19,26.63c-13.9,0.21-26.23-9.97-28.72-24.02c0.19,2.78,1.16,20.2-9.4,28.19
+		c-12.37,9.37-38.44,4.2-55.35-19.84c-9.98,9.68-25.31,8.42-32.37,0c-7.45-8.89-5.33-25.31,7.31-32.89
+		C90.93,132.97,90.16,116.97,97.78,106.07z"/>
+</g>
+<g id="Partly_cloudy">
+</g>
+</svg>
