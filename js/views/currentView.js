@@ -34,7 +34,9 @@ class CurrentView extends View {
         </div>
         <div class="current__weather | mb-med">
           <div class="current__weather__icon">
-            <img src="../../icons/Mist1.svg" alt=""/>
+          <img src="icons/${this._weatherIconFormat(
+            this._data.current.currWeather
+          )}${this._data.current.currDayNight}.svg" alt="" />
           </div>
           <div class="current__weather__text">
             <div class="current__weather__text__low">
