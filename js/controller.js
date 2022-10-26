@@ -1,4 +1,5 @@
 import * as model from "./model.js";
+import baseView from "./views/view.js";
 import currentView from "./views/currentView.js";
 import dayView from "./views/dayView.js";
 import hourView from "./views/hourlyView.js";
@@ -31,7 +32,6 @@ const errorCallBack = (error) => {
 
 const renderWeather = function () {
   currentView.render(model.state);
-  // currentView.airQualityColor(model.state.current.currAirQuality);
   dayView.render(model.state);
   hourView.render(model.state);
 };

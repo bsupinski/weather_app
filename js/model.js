@@ -93,7 +93,6 @@ export const fetchWeather = async function (coords) {
     state.dayForcast = createCurrentDayForecast(data);
     state.hourly = createHourlyForecast(data);
     state.fiveDay = createFiveDayForecast(data);
-    console.log(state.hourly);
   } catch (error) {
     throw error;
   }

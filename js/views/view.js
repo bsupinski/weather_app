@@ -41,18 +41,4 @@ export default class View {
       return "Hazardous";
     }
   }
-
-  airQualityColor() {
-    if ((airQuality.textConter = "Good")) {
-      airQuality.style.color = "green";
-      return;
-    }
-    if ((airQuality.textConter = "Hazardous")) {
-      airQuality.style.color = "orange";
-      return;
-    } else {
-      airQuality.style.color = "red";
-      return;
-    }
-  }
 }
