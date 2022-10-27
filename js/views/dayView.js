@@ -3,25 +3,14 @@ import View from "./view.js";
 class dayView extends View {
   _parentElement = document.querySelector(".five-day--wrapper");
 
-  _fiveDayDaysFormat(day) {
-    if (day.hourDate === this._data.location.locDateTime.split(" ")[0]) {
-      console.log("today");
-      return;
-    }
-    if (day.hourDate == this._data.location.locDateTime.split(" ")[0] + 1) {
-      console.log("Tomorrow");
-      return;
-    } else console.log(day.hourDate);
-  }
-
   _generateMarkup() {
     return this._data.fiveDay
       .map((day) => {
         return `
             <div class="five-day__day">
                 <div class="five-day__day__date">
-                  <p>Today</p>
-                  <p>12/25/2022</p>
+                  <p>${this._getDay(day.fiveDayDate)}</p>
+                  <p>${this._formatDate(day.fiveDayDate)}</p>
                 </div>
                 <div class="five-day__day__condition">
                   <div class="five-day__day__condition__icon">

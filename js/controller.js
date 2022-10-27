@@ -4,8 +4,6 @@ import currentView from "./views/currentView.js";
 import dayView from "./views/dayView.js";
 import hourView from "./views/hourlyView.js";
 
-const airQuality = document.querySelectorAll(".currentAirQuality");
-
 const body = document.querySelector("body");
 
 const userLocation = async function () {

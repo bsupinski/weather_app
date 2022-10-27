@@ -74,8 +74,12 @@ class CurrentView extends View {
           </div>
           <div class="current__weather__air__quality">
             <h4 class="mb-sm">Air Quality</h4>
-            <p class="mb-xsm air__quality">
-            ${this._airQuality(this._data.current.currAirQuality)}</p>
+            <p class="mb-xsm ${this._airQuality(
+              this._data.current.currAirQuality
+            )}">
+            ${this._capitalizeFirstLetter(
+              this._airQuality(this._data.current.currAirQuality)
+            )}</p>
           </div>
           <div class="current__weather__air__humidity">
             <h4 class="mb-sm">Humidity</h4>

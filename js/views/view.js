@@ -7,15 +7,37 @@ export default class View {
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
   }
 
+  _formatDate(apiDate) {
+    let date = new Date(apiDate);
+    date = new Date(
+      date.setMinutes(date.getMinutes() + date.getTimezoneOffset())
+    ).toLocaleString("en-us", {
+      timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    });
+    return date.replace(",", "").split(" ")[0];
+  }
+
+  _getDay(apiDate) {
+    let date = new Date(apiDate);
+    date = new Date(
+      date.setMinutes(date.getMinutes() + date.getTimezoneOffset())
+    );
+    return this._dayFormat(date.toString().split(" ")[0]);
+  }
+
   _dayFormat = (day) => {
     if (day === "Mon") return "Monday";
     if (day === "Tue") return "Tuesday";
     if (day === "Wed") return "Wednesday";
     if (day === "Thu") return "Thursday";
     if (day === "Fri") return "Friday";
-    if (day === "Day") return "Saturday";
+    if (day === "Sat") return "Saturday";
     if (day === "Sun") return "Sunday";
   };
+
+  _capitalizeFirstLetter(string) {
+    return string[0].toUpperCase() + string.slice(1);
+  }
 
   _weatherIconFormat(weather) {
     if (weather === "Sunny") return "Clear";
@@ -33,12 +55,12 @@ export default class View {
 
   _airQuality(aq) {
     if (aq < 3) {
-      return "Good";
+      return "good";
     }
     if (aq < 5) {
-      return "Unhealthy";
+      return "unhealthy";
     } else {
-      return "Hazardous";
+      return "hazardous";
     }
   }
 }

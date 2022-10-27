@@ -26,7 +26,11 @@ class hourlyView extends View {
           </div>
           <div class="hourly__hour__air__quality">
             <h4 class="mb-xsm">Air Quality</h4>
-            <p class="air__quality">${this._airQuality(hour.hourAirQuality)}</p>
+            <p class="${this._airQuality(
+              hour.hourAirQuality
+            )}">${this._capitalizeFirstLetter(
+          this._airQuality(hour.hourAirQuality)
+        )}</p>
           </div>
         </div>
       </div>`;
