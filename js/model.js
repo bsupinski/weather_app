@@ -16,7 +16,7 @@ const createCurrentLocationObject = (data) => {
     locCountry: location.country,
     locDay: new Date(location.localtime).toDateString().slice(0, 3),
     locDate: new Date(location.localtime).toDateString().slice(4),
-    locDateTime: location.localtime, //Used for create hourle forecast
+    locDateTime: location.localtime, //Used for create hourly forecast
     locTime: location.localtime.split(" ")[1],
   };
 };
@@ -93,7 +93,7 @@ export const fetchWeather = async function (coords) {
     state.dayForcast = createCurrentDayForecast(data);
     state.hourly = createHourlyForecast(data);
     state.fiveDay = createFiveDayForecast(data);
-    console.log(data.forecast.forecastday);
+    console.log(state.fiveDay[0].fiveDayDate);
   } catch (error) {
     throw error;
   }

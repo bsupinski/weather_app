@@ -3,6 +3,12 @@ import View from "./view.js";
 class dayView extends View {
   _parentElement = document.querySelector(".five-day--wrapper");
 
+  _fiveDayDaysFormat(date) {
+    if (date === this._data.fiveDay[0].fiveDayDate) return "Today";
+    if (date === this._data.fiveDay[1].fiveDayDate) return "Tomorrow";
+    else return this._formatDate(date);
+  }
+
   _generateMarkup() {
     return this._data.fiveDay
       .map((day) => {
@@ -10,7 +16,7 @@ class dayView extends View {
             <div class="five-day__day">
                 <div class="five-day__day__date">
                   <p>${this._getDay(day.fiveDayDate)}</p>
-                  <p>${this._formatDate(day.fiveDayDate)}</p>
+                  <p>${this._fiveDayDaysFormat(day.fiveDayDate)}</p>
                 </div>
                 <div class="five-day__day__condition">
                   <div class="five-day__day__condition__icon">
