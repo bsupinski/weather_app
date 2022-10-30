@@ -25,6 +25,11 @@ export default class View {
     return this._dayFormat(date.toString().split(" ")[0]);
   }
 
+  _dayNight(isDay) {
+    if (isDay == 0) return "night";
+    if (isDay == 1) return "day";
+  }
+
   _dayFormat = (day) => {
     if (day === "Mon") return "Monday";
     if (day === "Tue") return "Tuesday";
