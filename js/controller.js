@@ -25,7 +25,8 @@ const successCallBack = async function (position) {
   }
 };
 const errorCallBack = (error) => {
-  console.error(error);
+  if ((GeolocationPositionError.code = 1))
+    console.log(GeolocationPositionError.code);
 };
 
 const renderWeather = function () {
