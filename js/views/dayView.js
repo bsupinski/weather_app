@@ -14,16 +14,16 @@ class dayView extends View {
     <h1 class="five-day__title title | mb-lg">5 Day</h1>
     <div class="five-day--wrapper ${this._dayNight(
       this._data.current.currDayNight
-    )}">
+    )}__border--right">
       ${this._data.fiveDay.map(this._dayMarkup.bind(this)).join(" ")}
     </div>`;
   }
 
   _dayMarkup(day) {
     return `
-  <div class="five-day__day" ${this._dayNight(
+  <div class="five-day__day ${this._dayNight(
     this._data.current.currDayNight
-  )}__border--bottom>
+  )}__border--bottom">
       <div class="five-day__day__date">
         <p>${this._getDay(day.fiveDayDate)}</p>
         <p>${this._fiveDayDaysFormat(day.fiveDayDate)}</p>

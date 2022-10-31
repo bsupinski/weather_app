@@ -10,9 +10,18 @@
     <title>Weather App</title>
   </head>
   <body>
+    <div class="manual__location">
+      <form class="manual__location__form" action="" id="locationForm">
+        <input
+          class="manual__location__input mb-med"
+          type="text"
+          id="location"
+        />
+        <button class="manual__location__submit">Location</button>
+      </form>
+    </div>
     <div class="container">
       <div class="current"></div>
-
       <div class="hourly">
         <!-- <h1 class="hourly__title title | mb-lg">Hourly</h1>
         <div class="hourly--wrapper">
@@ -39,7 +48,6 @@
           </div>
         </div> -->
       </div>
-
       <div class="five-day">
         <!-- <h1 class="five-day__title title | mb-lg">5 Day</h1>
         <div class="five-day--wrapper dayBorderColor">

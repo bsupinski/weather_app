@@ -87,30 +87,42 @@ meter {
   -webkit-user-drag: element;
 }
 
-.dayBackground {
+.day__background {
   background-color: rgba(76, 242, 242, 0.432);
   color: #272626;
 }
 
-.nightBackground {
+.night__background {
   background-color: #272626;
   color: whitesmoke;
 }
 
-.dayBorderRight {
+.day__border--right {
   border-right: 2px solid #272626;
 }
 
-.nightBorderRight {
+.night__border--right {
   border-right: 2px solid white;
 }
 
-.dayBorderBottom {
+.day__border--bottom {
   border-bottom: 2px solid #272626;
 }
 
-.nightBorderBottom {
+.night__border--bottom {
   border-bottom: 2px solid white;
+}
+
+.good {
+  color: green !important;
+}
+
+.unhealthy {
+  color: orange !important;
+}
+
+.hazardous {
+  color: red !important;
 }
 
 .mb-xsm {
@@ -169,6 +181,14 @@ p {
   font-size: clamp(0.4rem, 3vw, 0.8rem);
 }
 
+form {
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
 body {
   width: 100vw;
   display: flex;
@@ -212,6 +232,38 @@ body {
     grid-template-areas: "current current" "5day hourly";
   }
 }
+.manual__location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #dfdfdf;
+}
+.manual__location__form {
+  width: 85%;
+  max-width: 25rem;
+}
+.manual__location__input {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 0.3rem;
+  width: 100%;
+}
+.manual__location__submit {
+  background-color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
 .current {
   width: 100%;
 }

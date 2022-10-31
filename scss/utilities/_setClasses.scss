@@ -1,15 +1,25 @@
-.dayBackground {
+.day__background {
   background-color: rgba(76, 242, 242, 0.432);
   color: rgb(39, 38, 38);
 }
 
-.nightBackground {
+.night__background {
   background-color: rgb(39, 38, 38);
   color: whitesmoke;
 }
 
-.night {
-  padding: 3px solid white;
+.day__border--right {
+  border-right: 2px solid rgb(39, 38, 38);
+}
+.night__border--right {
+  border-right: 2px solid white;
+}
+
+.day__border--bottom {
+  border-bottom: 2px solid rgb(39, 38, 38);
+}
+.night__border--bottom {
+  border-bottom: 2px solid white;
 }
 
 .good {
