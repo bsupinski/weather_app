@@ -18,8 +18,8 @@ class CurrentView extends View {
             </h4>
           </div>
           <div class="current__geographic__time">
-            <h3 class="current__geographic__time__day | mb-sm">${this._dayFormat(
-              this._data.location.locDay
+            <h3 class="current__geographic__time__day | mb-sm">${this._getDay(
+              this._data.location.locDate
             )}</h3>
             <h3 class="current__geographic__time__time | mb-sm">
               ${this._timeFormat(this._data.location.locTime)}
