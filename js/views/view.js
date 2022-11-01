@@ -56,8 +56,9 @@ export default class View {
       return `${time.slice(2, 2) + 12 + time.slice(2)} AM`;
     if (time >= "1:00" && time <= "1:59") return `${time} AM`;
     if (time >= "12:00" && time <= "12:59") return `${time} PM`;
-    // if (time >= "13:00" && time <= "23:59")
-    else return `${time.slice(0, 2) - 12 + time.slice(2)} PM`;
+    if (time >= "13:00" && time <= "23:59")
+      return `${time.slice(0, 2) - 12 + time.slice(2)} PM`;
+    else return `${time} AM`;
   };
 
   _timeStartsZero(time) {
