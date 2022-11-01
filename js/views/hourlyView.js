@@ -19,7 +19,9 @@ class hourlyView extends View {
     }.svg" alt="" />
       </div>
       <div class="hourly__hour__key-info">
-        <h3>${this._timeFormat(hour.hourDateTime.split(" ")[1])}</h3>
+        <h3>${this._timeStartsZero(
+          this._timeFormat(hour.hourDateTime.split(" ")[1])
+        )}</h3>
         <h3>${hour.hourTempF}&#176</h3>
         <h3>${hour.hourCondition}</h3>
       </div>
