@@ -49,8 +49,11 @@ const createCurrentDayForecast = (data) => {
 const createHourlyForecast = (data) => {
   const { forecast } = data;
   return forecast.forecastday[0].hour
-    .concat(forecast.forecastday[1].hour)
-    .filter((hour) => hour.time > state.location.locDateTime)
+    .concat(
+      data.forecast.forecastday[1].hour.filter(
+        (hour) => hour.time_epoch > state.location.locDateTime
+      )
+    )
     .slice(0, 12)
     .map((hour) => {
       return {
@@ -93,7 +96,17 @@ export const fetchWeather = async function (coords) {
     state.dayForcast = createCurrentDayForecast(data);
     state.hourly = createHourlyForecast(data);
     state.fiveDay = createFiveDayForecast(data);
-    console.log(state.current);
+    console.log(
+      data.forecast.forecastday[0].hour
+        .concat(
+          data.forecast.forecastday[1].hour.filter(
+            (hour) => hour.time_epoch > state.location.locDateTime
+          )
+        )
+        .slice(0, 12)
+    );
+
+    console.log(state.location.locDateTime);
   } catch (error) {
     throw error;
   }

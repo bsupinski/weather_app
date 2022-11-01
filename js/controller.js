@@ -2,7 +2,6 @@ import * as model from "./model.js";
 import currentView from "./views/currentView.js";
 import dayView from "./views/dayView.js";
 import hourView from "./views/hourlyView.js";
-import { coords } from "./config.js";
 
 const body = document.querySelector("body");
 const manual = document.getElementsByClassName("manual__location")[0];

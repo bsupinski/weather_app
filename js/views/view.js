@@ -50,6 +50,8 @@ export default class View {
   }
 
   _timeFormat = (time) => {
+    if (time >= "0:00" && time <= "0:59")
+      return `${time.slice(2, 2) + 12 + time.slice(1)} AM`;
     if (time >= "00:00" && time <= "00:59")
       return `${time.slice(2, 2) + 12 + time.slice(2)} AM`;
     if (time >= "12:00" && time <= "12:59") return `${time} PM`;
