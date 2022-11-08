@@ -23,8 +23,8 @@ class hourlyView extends View {
           this._timeFormat(hour.hourDateTime.split(" ")[1])
         )}</h3>
         <h3>${hour.hourTempF}&#176</h3>
-        <h3>${hour.hourCondition}</h3>
       </div>
+      <h3 class="hourly__hour__condition">${hour.hourCondition}</h3>
       <div class="hourly__hour__air">
         <div class="hourly__hour__air__speed">
           <h4 class="mb-xsm">Wind</h4>

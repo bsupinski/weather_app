@@ -97,22 +97,6 @@ meter {
   color: whitesmoke;
 }
 
-.day__border--right {
-  border-right: 2px solid #272626;
-}
-
-.night__border--right {
-  border-right: 2px solid white;
-}
-
-.day__border--bottom {
-  border-bottom: 2px solid #272626;
-}
-
-.night__border--bottom {
-  border-bottom: 2px solid white;
-}
-
 .good {
   color: green !important;
 }
@@ -153,6 +137,23 @@ meter {
   color: red;
 }
 
+@media (min-width: 37em) {
+  .day__border--right {
+    border-right: 2px solid #272626;
+  }
+
+  .night__border--right {
+    border-right: 2px solid white;
+  }
+
+  .day__border--bottom {
+    border-bottom: 2px solid #272626;
+  }
+
+  .night__border--bottom {
+    border-bottom: 2px solid white;
+  }
+}
 body {
   font-family: "Merriweather", serif;
 }
@@ -318,8 +319,9 @@ body {
 .hourly__hour {
   display: grid;
   grid-template-columns: min-content 1fr;
-  grid-template-areas: "icon info" "air air";
+  grid-template-areas: "icon info" "condition condition" "air air";
   gap: 0.5rem;
+  border: 1px solid red;
 }
 .hourly__hour__icon {
   grid-area: icon;
@@ -332,12 +334,14 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+.hourly__hour__condition {
+  grid-area: condition;
+}
 .hourly__hour__air {
   grid-area: air;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-}
-.hourly__hour__air p {
   text-align: center;
 }
 
@@ -368,6 +372,9 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
   grid-template-areas: "date date" "condition temps" "condition wind";
+  width: 100%;
+  max-width: 320px;
+  border: 1px solid red;
 }
 .five-day__day:not(:first-child) {
   padding-top: 1rem;

@@ -8,20 +8,6 @@
   color: whitesmoke;
 }
 
-.day__border--right {
-  border-right: 2px solid rgb(39, 38, 38);
-}
-.night__border--right {
-  border-right: 2px solid white;
-}
-
-.day__border--bottom {
-  border-bottom: 2px solid rgb(39, 38, 38);
-}
-.night__border--bottom {
-  border-bottom: 2px solid white;
-}
-
 .good {
   color: green !important;
 }
@@ -59,4 +45,20 @@
 
 .hazardous {
   color: red;
+}
+
+@media (min-width: 37em) {
+  .day__border--right {
+    border-right: 2px solid rgb(39, 38, 38);
+  }
+  .night__border--right {
+    border-right: 2px solid white;
+  }
+
+  .day__border--bottom {
+    border-bottom: 2px solid rgb(39, 38, 38);
+  }
+  .night__border--bottom {
+    border-bottom: 2px solid white;
+  }
 }

@@ -41,7 +41,6 @@ const errorCallBack = async function (error) {
 async function getCoords() {
   const coords = location.value;
 
-  console.log(coords);
   await model.fetchWeather(coords);
   renderWeather();
   if (model.state.current.currDayNight == "0")

@@ -15,6 +15,9 @@
       "date date"
       "condition temps"
       "condition wind";
+    width: 100%;
+    max-width: 320px;
+    border: 1px solid red;
     &:not(:first-child) {
       padding-top: 1rem;
     }
