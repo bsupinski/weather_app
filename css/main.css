@@ -321,7 +321,6 @@ body {
   grid-template-columns: min-content 1fr;
   grid-template-areas: "icon info" "condition condition" "air air";
   gap: 0.5rem;
-  border: 1px solid red;
 }
 .hourly__hour__icon {
   grid-area: icon;
@@ -374,7 +373,6 @@ body {
   grid-template-areas: "date date" "condition temps" "condition wind";
   width: 100%;
   max-width: 320px;
-  border: 1px solid red;
 }
 .five-day__day:not(:first-child) {
   padding-top: 1rem;
