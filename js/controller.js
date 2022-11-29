@@ -2,8 +2,7 @@ import * as model from "./model.js";
 import currentView from "./views/currentView.js";
 import dayView from "./views/dayView.js";
 import hourView from "./views/hourlyView.js";
-
-const body = document.querySelector("body");
+import baseView from "./views/baseView.js";
 const manual = document.getElementsByClassName("manual__location")[0];
 const locationForm = document.getElementById("locationForm");
 const location = document.getElementById("location");
@@ -18,10 +17,7 @@ const successCallBack = async function (position) {
     const coords = [latitude, longitude].toString();
     await model.fetchWeather(coords);
     renderWeather();
-    if (model.state.current.currDayNight == "0")
-      body.classList.toggle("night__background");
-    if (model.state.current.currDayNight == "1")
-      body.classList.toggle("day__background");
+    baseView.changeBgColor(model.state.current.currDayNight);
   } catch (error) {
     console.log(error);
   }
@@ -42,10 +38,7 @@ async function getCoords() {
   const coords = location.value;
   await model.fetchWeather(coords);
   renderWeather();
-  if (model.state.current.currDayNight == "0")
-    body.classList.toggle("night__background");
-  if (model.state.current.currDayNight == "1")
-    body.classList.toggle("day__background");
+  baseView.changeBgColor(model.state.current.currDayNight);
   manual.style.visibility = "hidden";
 }
 
